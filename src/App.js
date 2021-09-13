@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {
+    Typography,
+    AppBar,
+    Card,
+    CardActions,
+    CardContent,
+    CardMedia,
+    CssBaseline,
+    Grid,
+    Toolbar,
+    Container,
+} from '@material-ui/core';
+import { PhotoCamera } from '@material-ui/icons';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <CssBaseline />
+            <AppBar position='relative'>
+                <Toolbar>
+                    <PhotoCamera />
+                    <Typography variant='h6'>Photo Album</Typography>
+                </Toolbar>
+            </AppBar>
+            <main>
+                <div>
+                    <Container maxWidth='sm'>
+                        <Typography
+                            variant='h2'
+                            align='center'
+                            color='textPrimary'
+                            gutterBottom
+                        >
+                            Photo Album
+                        </Typography>
+                        <Typography
+                            variant='h5'
+                            align='center'
+                            color='textSecondary'
+                            paragraph
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Ratione, est recusandae! Impedit nam,
+                            voluptates soluta assumenda ullam minima beatae,
+                            error consequuntur, atque quas veniam? Quod,
+                            laboriosam nesciunt? Consequatur, alias incidunt.
+                        </Typography>
+                    </Container>
+                </div>
+            </main>
+        </>
+    );
 }
 
 export default App;
